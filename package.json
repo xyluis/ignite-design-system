@@ -5,9 +5,13 @@
   ],
   "scripts": {
     "dev": "npx turbo run dev --parallel",
-    "build": "npx turbo run build"
+    "build": "npx turbo run build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=packages/docs && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.25.0",
     "turbo": "^1.6.1"
   }
 }
